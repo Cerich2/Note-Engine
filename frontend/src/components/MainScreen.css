@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+.page {
+    width: 100%;
+}
+
+.heading {
+    font-family: 'Noto Serif', serif;
+    font-size: 40px;
+    padding: 7px 5px;
+}
+@media only screen and (max-width: 600px) {
+    .heading{
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+    }
+}
