@@ -1,0 +1,25 @@
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+@media only screen and (min-width:1200px) {
+    .buttonContainer {
+        padding: 0 200px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .buttonContainer {
+       width: 13em;
+       height: 2em;
+       margin: auto;
+
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .ActionButton {
+        background-color: blueviolet;
+    }
+}
