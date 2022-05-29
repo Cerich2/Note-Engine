@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import styled from 'styled-components';
 import note from "../Assets/note.jpg"
 
@@ -10,6 +9,7 @@ export const StyledLandingPage = styled.div`
     align-items: center;
     background-image: url(${note});
     background-position: center;
+    min-height: 94vh;
     background-size: cover;
     h1 {
         font-size: 95px;
@@ -36,15 +36,40 @@ export const StyledLandingPage = styled.div`
 `
 export const Container = styled.div`
     min-height: 93vh;
-    display: flex;
+    // background-color: #F4F4F4;
     width: 90%;
     margin: auto;
+    ${(props) => props.login && `
+        width: 50%;
+    `}
 `
 
 export const Cards = styled.div`
     width: 100%;
     height: 5vh;
-    background-color: pink;
     margin-top: 1em;
     position: relative;
+`
+export const FieldWrapper = styled.div`
+    font-size: 0.9em;
+    display: grid;
+    #email, #password, #name, #c-password {
+        font-size: 0.8em;
+    }
+  
+`
+export const UserImage = styled.div`
+    display: flex;
+    justify-content: right;
+    input {
+        display: none;
+    }
+    #user-image {
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+        width: 3.9em;
+        height: 3.9em;
+    }
 `

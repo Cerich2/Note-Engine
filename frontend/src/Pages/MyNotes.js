@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import {Paper, Button, Chip, Card, Stack} from '@mui/material';
-import { Container, Cards, main } from "../theme/GlobalTheme"
+import {Paper, Chip, Card} from '@mui/material';
 import  MainScreen  from "../components/MainScreen"
 import { MainActionButton, ActionButton, Accordion, AccordionSummary, AccordionDetails } from "../theme/MuiStyled"
 import "./LandingPage.css"
@@ -8,6 +7,7 @@ import Grid from '@mui/material/Grid'
 import { useNavigate } from 'react-router-dom';
 import moment from 'moment';
 import axios from "axios"
+import {notes} from "../data/notes"
 
 const MyNotes = () => {
     const welcome = "Welcome Back Spencer"
@@ -26,17 +26,19 @@ const MyNotes = () => {
       }
     }
 
-    const getNotes = async() => {
+    const getNotes = async () => {
       const { data } = await axios.get("/api/notes");
+      console.log(data, "here")
+
       if (data !== undefined || data.length !== 0){
         setNoteData(data)
       }
-      console.log(noteData, "here")
     } 
 
     useEffect(()=> {
       getNotes();
     },[])
+
     return (
       <MainScreen title={welcome}>
           <div style={{ margin: "1.5em 0 0 0"}}>
@@ -96,7 +98,6 @@ const MyNotes = () => {
                 })
               }
           </div>
-      
       </MainScreen>
     )
 }

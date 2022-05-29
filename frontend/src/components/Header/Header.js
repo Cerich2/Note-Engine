@@ -25,7 +25,7 @@ const Icons = styled(Box)(({theme})=>({
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   return (
-    <AppBar sx={{backgroundColor: `${main}` }}position="sticky">
+    <AppBar sx={{backgroundColor: `${main}` }} position="sticky">
         <StyledToolBar>
             <Typography 
                 variant="h5" 

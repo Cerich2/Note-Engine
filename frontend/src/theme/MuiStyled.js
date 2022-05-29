@@ -47,6 +47,10 @@ export const BootstrapButton = styled(Button)({
     '&:focus': {
       boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
     },
+    '&:disabled': {
+      backgroundColor: "lightgrey",
+      borderColor: "lightgrey",
+    },
   });
 
   export const MainActionButton = styled(Button)({

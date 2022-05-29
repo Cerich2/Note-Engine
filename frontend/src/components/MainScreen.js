@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from "../theme/GlobalTheme"
-import { Box } from "@mui/material";
 import "./MainScreen.css"
+import { Paper } from '@mui/material'
 
 const MainScreen = ({title, children}) => {
     
@@ -10,7 +10,7 @@ const MainScreen = ({title, children}) => {
         <div className="page">
             {
                 title && <>
-                <h6  className="heading">{title}</h6>
+                <h6 className="heading">{title}</h6>
                 <hr/>
                 </>
             }

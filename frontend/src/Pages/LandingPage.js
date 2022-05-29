@@ -16,8 +16,17 @@ import LoginIcon from '@mui/icons-material/Login';
 //   },
 // }))
 
+
 const LandingPage = () => {
   const navigate = useNavigate();
+
+  // React.useEffect(() => {
+  //   const userInfo = localStorage.getItem("userInfo")
+
+  //   if (userInfo) {
+  //     navigate("/mynotes")
+  //   }
+  // }, [navigate])
   return (
     <StyledLandingPage>
       <main>
@@ -34,11 +43,11 @@ const LandingPage = () => {
             </BootstrapButton>
           <BootstrapButton
             className="mainButton"
-            onClick={() => navigate("/signup")}
+            onClick={() => navigate("/register")}
           >
             Sign Up
           </BootstrapButton>
-          </div>
+        </div>
       </main>
     </StyledLandingPage>
   )
